@@ -1,0 +1,12 @@
+* {margin:0; padding:0;}
+table{ border-collapse: collapse;}
+.Test4 { width: 600px; margin:20px}
+.Test4 table{}
+.Test4 table .no{ width: 50px;}
+.Test4 table .name{ width: 120px;}
+.Test4 table .age{width: 100px;}
+.Test4 table .addr{}
+.Test4 table .done{ width: 100px;}
+.Test4 table tr td,
+.Test4 table tr th{ height: 40px; text-align: center;
+font-size: 18px; vertical-align:  middle; border:1px solid #000}
