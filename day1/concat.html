@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script> 
+const arr=[`홍길동`, `강호동`, `유재석`]
+arr.push(`제시`)
+arr.push(`이효리`)
+console.log(arr)
+
+const arr1=[`홍길동`, `강호동`, `유재석`]
+const newArr1 = arr1.concat();
+console.log(arr1)
+console.log(newArr1)
+
+const newArr2 = arr.concat(`정연서`)
+console.log(arr1)
+console.log(newArr2)
+
+const arr2=[{no:1 , name: `홍길동`, age:20},
+{no:2, name:`강호동`, age:30},
+{no:3, name:`김철수`, age:40},
+{no:4, name:`김철수`, age:40}
+
+]
+const newArr3 = arr2.concat({no:5, name:`이효리`, age:15})
+console.log(arr2)
+console.log(newArr3)
+</script>
+</body>
+</html>
