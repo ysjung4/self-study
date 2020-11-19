@@ -26,10 +26,10 @@ const mapStateToProps = (state) => ({
 })
 //쓰기
 const mapDispatchToProps = (dispatch) => ({
-   insert : () => dispatch( insert() ),
-   remove : () => dispatch( remove() ),
-   toggle : () => dispatch( toggle() ),
-   changeInput : () => dispatch( changeInput() )
+   insert : (text) => dispatch( insert(text) ),
+   remove : (id) => dispatch( remove(id) ),
+   toggle : (id) => dispatch( toggle(id) ),
+   changeInput : (text) => dispatch( changeInput(text) )
 })
 export default connect(
     mapStateToProps,

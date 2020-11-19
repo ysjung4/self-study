@@ -1,11 +1,11 @@
 import React from 'react';
 import './TodoItem.css'
 
-const TodoItem = () => {
+const TodoItem = ({item}) => {
     return (
         <div>
-            <p className="on">
-            번호/내용
+            <p>
+                {item.id}/ {item.text}
             </p>
         </div>
     );

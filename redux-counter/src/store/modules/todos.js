@@ -4,11 +4,11 @@ const REMOVE = 'todos/REMOVE' //목록삭제
 const TOGGLE = 'todos/TOGGLE' //클래스 붙이고 떼기(수정)
 const CHANGE_INPUT = 'todos/CHANGE_INPUT' //input 값 처리
 //액션 함수 내보내기
-
-export const insert = () => ({type:INSERT})
+let no = 2
+export const insert = ( text) => ({type:INSERT,list:{id:no++,text}})
 export const remove = () => ({type:REMOVE})
 export const toggle = () => ({type:TOGGLE})
-export const changeInput = () => ({type:CHANGE_INPUT})
+export const changeInput = (text) => ({type:CHANGE_INPUT,text})
 
 //리듀서- 순수함수
 const initalState = {
@@ -24,6 +24,7 @@ const reducer = (state = initalState,action) =>{
         case INSERT:
             return{
                 ...state,
+                data:state.data.concat(action.list)
 
             }
             case REMOVE:
@@ -39,6 +40,7 @@ const reducer = (state = initalState,action) =>{
                 case CHANGE_INPUT:
             return{
                 ...state,
+                input: action.text
             }
 
         default:
