@@ -7,7 +7,7 @@ const Todos = ( { input, data, remove, toggle, changeInput, insert }) => {
         <div>
             <h2>TODO LIST</h2>
             <TodoInput input={input} changeInput={changeInput} insert={insert}/>
-            <TodoList data={data}/>
+            <TodoList data={data} remove={remove} />
         </div>
     );
 };
