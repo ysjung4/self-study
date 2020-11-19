@@ -8,29 +8,34 @@ const BLUE = 'color/BLUE'
 export const red = () => ({type:RED})
 export const pink = () => ({type:PINK})
 export const blue = () => ({type:BLUE})
+//액션함수 내보내기
+
 
 //리듀서 순수 함수
 const initalState = { color:'orange'}
 const reducer = (state=initalState,action)  => {
     switch(action.type){
-        case RED:
+     
+            case RED:
             return {
                 ...state,
-                color:red
+                color:'red'
             }
             case PINK:
             return{
                 ...state,
-                color:pink
+                color:'pink'
             }
             case BLUE:
                 return{
                     ...state,
-                    color:blue
+                    color:'blue'
                 }
+        
         default:
             return state
     }
 }
 
 export default reducer
+
