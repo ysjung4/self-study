@@ -15,16 +15,10 @@ const ColorContainer = ({color, red,pink,blue}) => {
         </div>
     );
 };
-const mapStateToProps = (state) => ({
-color : state.color.color
-})
-const mapDispatchToProps = (dispatch) => ({
-red: () => dispatch( red() ),
-pink:() => dispatch( pink() ),
-blue: () => dispatch( blue( ))
-})
+
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-    )
+    (state) => ({
+        color : state.color.color
+        })
+    ,{red,pink,blue})
     (ColorContainer);

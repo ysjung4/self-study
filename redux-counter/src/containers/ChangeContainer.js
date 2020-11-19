@@ -15,15 +15,18 @@ const ChangeContainer = ( {color,changeColor}) => {
     );
 };
 
-const mapStateToProps = (state) =>({
-    color: state.changecolor.color
-})
-const mapDispatchToProps = (dispatch) => ({
-    changeColor :  (color) => dispatch(changeColor(color))
-})
+// const mapStateToProps = (state) =>({
+//     color: state.changecolor.color
+// })
+// const mapDispatchToProps = (dispatch) => ({
+//     changeColor :  (color) => dispatch(changeColor(color))
+// }) => 기본형
 
 export default connect (
-    mapStateToProps,
-    mapDispatchToProps
+    // mapStateToProps,
+    // mapDispatchToProps
+    ({changecolor}) =>({
+        color: changecolor.color
+    }),{changeColor}
 )
 (ChangeContainer);

@@ -15,15 +15,11 @@ const CounterContainer = ({cnt,increment,decrement,color}) => {
     );
 };
 
-const mapStateToProps = (state) => ({
-    cnt : state.counter.cnt,
-    color : state.color.color
-})
-const mapDispatchToProps = (dispatch) => ({
-    increment: () => dispatch(increment() ),
-    decrement: () => dispatch(decrement() )
-})
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+    (state) => ({
+        cnt : state.counter.cnt,
+        color : state.color.color
+    }),{increment,decrement}
+  
+  
 )(CounterContainer);

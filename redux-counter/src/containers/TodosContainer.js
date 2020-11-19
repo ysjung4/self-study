@@ -20,18 +20,22 @@ const TodosContainer = ( { input, data, remove, toggle, changeInput, insert }) =
 };
 
 //읽기
-const mapStateToProps = (state) => ({
-   input : state.todos.input,
-   data: state.todos.data
-})
+// const mapStateToProps = (state) => ({
+//    input : state.todos.input,
+//    data: state.todos.data
+// })
 //쓰기
-const mapDispatchToProps = (dispatch) => ({
-   insert : (text) => dispatch( insert(text) ),
-   remove : (id) => dispatch( remove(id) ),
-   toggle : (id) => dispatch( toggle(id) ),
-   changeInput : (text) => dispatch( changeInput(text) )
-})
+// const mapDispatchToProps = (dispatch) => ({
+//    insert : (text) => dispatch( insert(text) ),
+//    remove : (id) => dispatch( remove(id) ),
+//    toggle : (id) => dispatch( toggle(id) ),
+//    changeInput : (text) => dispatch( changeInput(text) )
+// })
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+    ({todos}) => ({
+        input :todos.input,
+        data:todos.data
+     }),{insert,remove,toggle,changeInput}
+    // mapStateToProps,
+    // mapDispatchToProps
 ) (TodosContainer);
